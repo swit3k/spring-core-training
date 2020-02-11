@@ -3,7 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userRepository" class="springcoretraining.user.UserRepositoryImplXml">
+    <bean id="userRepository" class="springcoretraining.user.UserRepositoryImplXml" autowire="no">
         <qualifier value="cache" />
     </bean>
+
 </beans>

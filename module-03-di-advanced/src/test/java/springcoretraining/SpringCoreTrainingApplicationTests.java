@@ -30,6 +30,6 @@ public class SpringCoreTrainingApplicationTests {
 
 		// assert
 		assertThat(resource).extracting("firstName").containsExactly("Jan");
-		assertThat(resource).extracting("lastName").containsExactly("Kowalski");
+		assertThat(resource).extracting("lastName").containsExactly("Nowak");
 	}
 }
