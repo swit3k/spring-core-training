@@ -59,5 +59,6 @@
 		<module>module-02-di</module>
 		<module>module-03-di-advanced</module>
         <module>module-04-di-java-based-config</module>
-    </modules>
+		<module>module-05-di-resources</module>
+	</modules>
 </project>
