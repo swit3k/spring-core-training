@@ -1,23 +1,6 @@
-package dk.bec.springcoretraining;
+package springcoretraining.user;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Collections;
-import java.util.List;
-
-@RestController
-public class UsersEndpoint {
-
-    @GetMapping("/users")
-    public List<User> getUsers() {
-        User user = new User("Jan", "Kowalski", 82);
-
-        return Collections.singletonList(user);
-    }
-}
-
-class User {
+public class User {
     private String firstName;
     private String lastName;
     private Integer age;

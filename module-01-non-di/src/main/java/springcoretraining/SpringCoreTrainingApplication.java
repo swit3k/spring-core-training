@@ -1,9 +1,7 @@
-package dk.bec.springcoretraining;
+package springcoretraining;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import javax.ws.rs.ApplicationPath;
 
 @SpringBootApplication
 public class SpringCoreTrainingApplication {

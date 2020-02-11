@@ -1,10 +1,11 @@
-package dk.bec.springcoretraining;
+package springcoretraining;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import springcoretraining.user.User;
 
 import java.util.List;
 
@@ -20,14 +21,15 @@ public class SpringCoreTrainingApplicationTests {
 	private TestRestTemplate restTemplate;
 
 	@Test
-	public void greetingShouldReturnDefaultMessage() throws Exception {
+	public void collectionOfUsersShouldDependOnRepository() throws Exception {
 		// arrange
-		String usersUrl = "http://localhost:" + port + "/users";
+		String usersUrl = "http://localhost:" + port + "/users?repository=db";
 
 		// act
 		List<User> resource = this.restTemplate.getForObject(usersUrl, List.class);
 
 		// assert
 		assertThat(resource).extracting("firstName").containsExactly("Jan");
+		assertThat(resource).extracting("lastName").containsExactly("Kowalski");
 	}
 }

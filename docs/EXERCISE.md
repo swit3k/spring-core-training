@@ -7,6 +7,5 @@
 
 ```./mvnw package``` - compiles, packages & runs all tests (including integration tests)
 
-```./mvnw spring-boot:run``` - compiles project & runs Spring Boot
-
-## Dependency Injection (spring-core/di)
+## Dependency Injection
+```./mvnw -pl di spring-boot:run``` - compiles di project & runs Spring Boot
